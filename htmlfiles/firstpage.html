@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"href="{% static 'css/student_login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand&display=swap" rel="stylesheet">
+    <title>HOME</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+
+  <div class="collapse navbar-collapse margin" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link lb" href="#">Student <span class="sr-only">(current)</span></a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link " href="/teacher_login">Admin</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+    <div class="row allmargin">
+      <div class="name intro col-lg-5 text-center">
+        <div class="Group9">
+
+        <div id="nametitle" class=" login">
+          Login
+        </div>
+        <div class="enter-your-email-and ">
+        <p id="nametitle">  Enter your email and password to login</p>
+        </div>
+        <form class="" action="examonlineone" method="post">
+         {%  csrf_token %}
+
+        <div class="input-box email">
+          <input class="rectangle  " type="email" id="email" name="email" placeholder="Email address">
+        </div>
+          <div class="input-box pwd">
+          <input class="rectangle  " type="password" id="pwd" name="pwd"placeholder="Password">
+        </div>
+
+        <div class=" create-button">
+
+<button class=" rectangle-copy-3 btn-light create-your-store ct" type="submit">Login</button>
+</div>
+</form>
+<!-- <div id="nametitle" class="forgot-password">
+<a class="login-page-link" href="#" class="already-have-an-acco"> Forgot Password</a>
+</div> -->
+       <hr class="path-2">
+
+
+      </div>
+        <!-- <div class="text-center">
+
+        <h1 id="nametitle">Hi i am ravi</h1> </div>
+        <div class="text-center">
+
+        <button type="button" class="btn btn-light btn-lg ct">CONTACT ME</button></div> -->
+      </div>
+      <div class="pic  col-lg-7 ">
+           <img class="namecardpic" src="{% static 'css/sitepic.jpg' %}" alt="">
+      </div>
+
+    </div>
+</div>
+  </body>
+</html>
