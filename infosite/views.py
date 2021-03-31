@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, 'firstpage.html')
+
+def student_information(request):
+    return render(request, 'displayinfo.html')
