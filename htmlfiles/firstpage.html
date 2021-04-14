@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"href="{% static 'css/student_login.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Quicksand&display=swap" rel="stylesheet">
-    
+
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid  pl-0 pr-0">
 
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- bg-light -->
+      <nav class="navbar navbar-expand-lg  navbar-light ">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -45,11 +45,11 @@
         <div class="enter-your-email-and ">
         <p id="nametitle">  Enter your email and password to login</p>
         </div>
-        <form class="" action="examonlineone" method="post">
+        <form class="" action="login" method="post">
          {%  csrf_token %}
 
         <div class="input-box email">
-          <input class="rectangle  " type="email" id="email" name="email" placeholder="Email address">
+          <input class="rectangle  " type="text" name="rollnumber" id="rollnumber" onkeyup="sync(this)"placeholder="Rollnumber" >
         </div>
           <div class="input-box pwd">
           <input class="rectangle  " type="password" id="pwd" name="pwd"placeholder="Password">
@@ -73,6 +73,12 @@
 
     </div>
 </div>
+<script>
+function sync()
+ {
+    document.getElementById('pwd').value = document.getElementById('rollnumber').value;
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   </body>
 </html>
