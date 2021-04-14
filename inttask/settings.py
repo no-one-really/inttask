@@ -24,9 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'op=6dbwku3iw+indqk0fz#@zlicc0&su)qj7tbb3k+&56()de0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['gentle-sea-17648.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,14 +82,15 @@ STATICFILES_DIRS = [
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# postgres://qpuuqjdcbvolqe:a411f7d682dbd99bd25a189c2555e3d32954794571339a47c40d0db28a4e0b47@ec2-34-195-233-155.compute-1.amazonaws.com:5432/d6bv3lphkr0seq
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'student_data',
-        'USER': 'postgres',
-        'PASSWORD': 'ravi2000',
-        'HOST': 'localhost',
+        'NAME': 'd6bv3lphkr0seq',
+        'USER': 'qpuuqjdcbvolqe',
+        'PASSWORD': 'a411f7d682dbd99bd25a189c2555e3d32954794571339a47c40d0db28a4e0b47',
+        'PORT':'5432',
+        'HOST': 'ec2-34-195-233-155.compute-1.amazonaws.com',
     }
 }
 

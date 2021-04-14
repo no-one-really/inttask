@@ -23,6 +23,5 @@ urlpatterns = [
     path("stud_information/",include('infosite.urls')),
     path('login/',include('infosite.urls')),
     path('logout/',include('infosite.urls')),
-    # path('unsuccessful/',include('infosite.urls')),
     path('admin/', admin.site.urls),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

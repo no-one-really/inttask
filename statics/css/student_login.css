@@ -9,6 +9,9 @@
 .allmargin{
   margin: 6% 9%;
 }
+.hj{
+  background-color:#46676D;
+}
 .intro{
 
   background-color: #46676D;
@@ -18,7 +21,7 @@
 }
 .namecardpic
 {
-  height: inherit;
+  height: 100%;
   width: inherit;
 }
 #nametitle{
@@ -84,4 +87,10 @@
 }
 .login-page-link:hover{
   color: #00917C;
+}
+.bn{
+  color:black;
+}
+.kl{
+  background-color: #d1dad5;
 }

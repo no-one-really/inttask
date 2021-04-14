@@ -11,10 +11,6 @@ def index(request):
 def logout(request):
     return render(request, 'firstpage.html')
 
-# def unsuccessful(request,submition_check):
-#
-#     return render()
-
 def login(request):
     print('submitted reg')
     roll_number= request.POST['rollnumber']
