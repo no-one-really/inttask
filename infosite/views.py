@@ -11,6 +11,10 @@ def index(request):
 def logout(request):
     return render(request, 'firstpage.html')
 
+# def unsuccessful(request,submition_check):
+#
+#     return render()
+
 def login(request):
     print('submitted reg')
     roll_number= request.POST['rollnumber']
@@ -37,4 +41,8 @@ def student_information(request):
 
 
     except:
-        return HttpResponse("<h1>you are not enrolled</h1>")
+        submition_check={
+                         'unsuccessful_submit': True,
+                         }
+        print(submition_check['unsuccessful_submit'])
+        return render(request, 'firstpage.html',submition_check)
