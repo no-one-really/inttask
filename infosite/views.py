@@ -18,9 +18,11 @@ def login(request):
     print(roll_number)
     data= Stud_data
     uiop='/'+roll_number
-    if isinstance(roll_number[0],int):
-        return redirect(uiop,roll_number)
-    else:
+    try:
+        if isinstance(int(roll_number[0]),int):
+            print(isinstance(int(roll_number[0]),int))
+            return redirect(uiop,roll_number)
+    except:
         submition_check={
                          'unsuccessful_submit': True,
                          }
