@@ -18,7 +18,14 @@ def login(request):
     print(roll_number)
     data= Stud_data
     uiop='/'+roll_number
-    return redirect(uiop,roll_number)
+    if isinstance(roll_number[0],int):
+        return redirect(uiop,roll_number)
+    else:
+        submition_check={
+                         'unsuccessful_submit': True,
+                         }
+        print(submition_check['unsuccessful_submit'])
+        return render(request, 'firstpage.html',submition_check)
 
 
 def student_information(request):
